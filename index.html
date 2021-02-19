@@ -35,6 +35,9 @@
       if(codeString == "helloWorld"){
         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO";
       }
+      else{
+        document.getElementById("error").innerHTML = "Code doesn't exist, try again";
+      }
     }
 
 
@@ -59,6 +62,12 @@
 
       <div class="col-sm-4">
       </div>
+    </div>
+    <div class="row" style="text-align: center;">
+      <div class="col-sm-12">
+          <p id="error"></p>
+      </div>
+
     </div>
   </div>
 
