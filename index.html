@@ -33,7 +33,7 @@
       console.log(codeString);
       codeString = codeString.trim();
       if(codeString == "helloWorld"){
-        window.location.href = "./pdf/ASCII_Room.pdf";
+        window.open("./pdf/ASCII_Room.pdf");
       }
       else{
         document.getElementById("error").innerHTML = "Code doesn't exist, try again";
