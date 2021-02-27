@@ -32,12 +32,30 @@
       var codeString = document.getElementById("code").value;
       console.log(codeString);
       codeString = codeString.trim();
-      if(codeString == "helloWorld"){
+      if(codeString == "JHelloWorld" || codeString == "SHelloWorld"){
         window.open("./pdf/ASCII_Room.pdf");
+      }
+      else if (codeString == "JCODE" || codeString == "SCODE") {
+        window.open("./pdf/Caesar.pdf")
+      }
+      else if (codeString == "J3469" || codeString == "S1510") {
+        window.open("./pdf/Logic_Gates.pdf")
+      }
+      else if (codeString == "S3469") {
+        window.open("./pdf/Dancing_Man.pdf")
+      }
+      else if (codeString == "S7") {
+        window.open("./pdf/Regex.pdf")
+      }
+      else if (codeString == "J7" || codeString == "regex code") {
+        window.open("./victory.html")
       }
       else{
         document.getElementById("error").innerHTML = "Code doesn't exist, try again";
       }
+    }
+    function instructions(){
+      window.location.href = "./instructions.html";
     }
 
 
@@ -46,6 +64,11 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+    <div class="=instruction-button pt-3" style="text-align: right; color: green;">
+      <button type="button" class="btn" style="color: #7FFF00; !important" onclick="instructions();">Instructions</button>
+    </div>
+  </div>
   <div class="pt-5 header container-fluid" style="text-align: center; margin-top:10em;">
     <h1>ABCS Escape Room</h1>
   </div>
@@ -78,4 +101,13 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    document.getElementById("code")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        enter();
+    }
+  });
+  </script>
 </body>
